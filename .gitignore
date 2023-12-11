@@ -1,0 +1,24 @@
+# ignore all
+/*
+
+# not ignore gitignore
+!/.gitignore
+
+# not ignore readme
+!/readme.org
+
+# not ignore ADXL343.pdf
+!/ADXL343.pdf
+
+# not ignore images
+!/img
+
+# not ignore source files
+!/src
+/src/*
+
+# not ignore keyfinder files
+!/src/keyfinder
+/src/keyfinder/*
+!/src/keyfinder/keyfinder.kicad_*
+!/src/keyfinder/empty.kicad_wks

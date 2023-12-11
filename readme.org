@@ -1,0 +1,86 @@
+* KiCad nRF52832
+** Résumé
+
+Modélisation sous le logiciel KiCad du schematic et du PCB d'une carte à partir du SoC nRF52832.
+Cette modélisation inclue les éléments listés dans un diagramme des fonctionnalités disponible juste après.
+
+*** Diagramme des fonctionnalités
+
+#+begin_src ditaa :exports results :file img/diagramme_fonctionnalites.png :cmdline -E
+           +--------------+                               +-------------+
+           |              |                               |             |
+           |              |   P12                         |             |
+           |     LED      +------------+          P21     |    Prog.    |
+           |    P0.10     |            |       +----------+  TC2030-CTX |          
+           |              |            |       |          |             |          
+           |              |            |       |          |             |          
+           +--------------+            |       |          +-------------+          
+                                       |       |                                   
+                                       |       |                                   
+                                       v       v                                   
+                                   +---------------+                               
+  +-----------------------+        |               |                 +--------------+
+  |                       |        |               |                 |              |
+  |                       |        |               |                 |              |
+  |   Buzzer              |        |   nRF52832    |      P0.21      |    Reset     |
+  |   CPT-7502-65-SMT-TR  | P0.09  |               |<----------------+    P0.21     |
+  |                       |------->|               |                 |              |
+  |                       |        |               |                 |              |
+  +-----------------------+        +---------------+                 +--------------+
+                                       ^        ^                        
+                                       |        |                        
+                                       |        |                        
+                                       |        |                        
+           +--------------+            |        |         +-----------------+  
+           |              |            |        |         |                 |  
+           |              |  P0.08     |        |  P0.02  |                 |  
+           |    Bouton    +------------+        +---------+   Batterie      |  
+           |   MHPS2285   |                               | BAT-HLD-006-SMT |
+           |              |                               |                 |
+           |              |                               |                 |
+           +--------------+                               +-----------------+
+                   
+                   
+#+end_src
+
+#+CAPTION: Diagramme des fonctionnalités
+#+RESULTS:
+[[file:img/diagramme_fonctionnalites.png]]
+
+** Pour commencer
+*** Pré-requis :
+**** KiCad
+
+Vous avez besoin du logiciel KiCad. Il est disponible à l'adresse suivante: [[https://www.kicad.org/download/]]
+
+** Démarrage
+
+Ouvrir les fichiers =.kicad_sch= pour le schematic et =.kicad_pcb= pour le modèle PCB.
+
+** Outils
+
+- KiCad
+
+** Versions
+
+*Dernière version stable :* 1.0
+
+*Dernière version :* 1.0
+
+[[../../tags][Liste des versions]]
+
+** Auteurs
+*** Responsable de projet
+
+- PETIT Clément
+- MARCHAND Pierre
+
+*** Equipe de développement
+      
+- DUREL Enzo
+  
+** Licence
+
+KiCad est un logiciel libre mais soumis à certaines licence qui sont listées en détail sur leur site web à la page: [[https://www.kicad.org/about/licenses/]]
+
+
